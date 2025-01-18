@@ -6,7 +6,7 @@ body {
     padding: 0;
 
     /* Add a background image */
-    background: url('D:/Cas/BYU/wdd130/images/background.jpg') no-repeat center center fixed;
+    background: url('file:///D:/Cas/BYU/wdd130/images/background.jpg') no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the entire viewport */
 }
 
