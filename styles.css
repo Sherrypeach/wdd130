@@ -5,9 +5,6 @@ body {
     margin: 0;
     padding: 0;
 
-    /* Add a background image */
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures the image covers the entire viewport */
 }
 
 /* Header Styles */
