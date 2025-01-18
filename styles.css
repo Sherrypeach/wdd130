@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+
+    /* Add a background image */
+    background: url('D:/Cas/BYU/wdd130/images/background.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+}
+
+/* Header Styles */
+header {
+    background: #ebc2ce; /* Soft pink background */
+    color: #5f5454; /* Dark text color */
+    padding: 20px 0; /* Increased padding for better spacing */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically centers items */
+    justify-content: center; /* Centers all items evenly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky; /* Keeps header at the top */
+    top: 0; /* Aligns sticky header to the top */
+    z-index: 1000; /* Ensures header stays on top of other elements */
+    border-bottom: 7px solid #fff3fc; /* Adds a bottom border */
+}
+
+/* Navigation Container */
+header nav {
+    display: flex; /* Flex container for the links */
+    align-items: center; /* Centers links vertically */
+    gap: 10px; /* Controls the spacing between items */
+}
+
+/* Navigation Links */
+header nav a {
+    color: #fff6fd; /* Dark gray link color */
+    text-decoration: none; /* Removes underline */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+header nav a:hover {
+    color: #333; /* Darker shade for hover effect */
+    text-decoration: underline; /* Adds underline on hover */
+    transform: scale(1.05); /* Slightly enlarges link on hover */
+}
+
+/* Center Image */
+header img.bow {
+    height: 40px; /* Set the desired height for the bow */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 20px; /* Adds space between image and links */
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    color: #5f5454;
+    line-height: 1.6;
+    background-color: rgba(253, 241, 241, 0.8); /* Added slight background for readability */
+    border-radius: 10px; /* Rounded corners for aesthetic */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Apply Playwrite IN font to main title */
+.playwrite-in-title {
+    text-align: center; /* Center-aligns the title */
+    margin-bottom: 20px; /* Adds spacing below the title */
+    font-family: 'Playwrite IN', serif; /* Apply Playwrite IN font */
+    font-optical-sizing: auto;
+    font-weight: 300; /* Adjust weight if needed */
+    font-size: 2.5rem; /* Main title font size */
+    color: #5f5454; /* Optional: Set a color for the title */
+}
+
+/* Adjust the size for the aside title */
+aside h2.playwrite-in-title {
+    font-size: 1.8rem; /* Smaller font size for the aside title */
+    font-weight: 300; /* Keep the same weight for consistency */
+    color: #5f5454; /* Optional: Set a color for the title */
+}
+
+/* Profile Image: Updated to Display a Heptagon Shape with Border */
+main img.profile-pic {
+    float: left; /* Float image to the left */
+    width: 200px; /* Fixed width for consistent appearance */
+    height: 200px; /* Fixed height for consistent aspect ratio */
+    margin-right: 20px; /* Add space between the image and the text */
+    object-fit: cover; /* Ensures the image fits proportionally within the shape */
+    box-sizing: border-box; /* Ensures border is included in the box size */
+
+    /* Applying clip-path to create a heptagon shape */
+    clip-path: polygon(
+        50% 0%,      /* Top vertex */
+        85% 15%,     /* Upper-right */
+        100% 50%,    /* Middle-right */
+        85% 85%,     /* Lower-right */
+        50% 100%,    /* Bottom */
+        15% 85%,     /* Lower-left */
+        0% 50%,      /* Middle-left */
+        15% 15%      /* Upper-left (optional for smooth connection) */
+    );
+    -webkit-clip-path: polygon(
+        50% 0%, 
+        85% 15%, 
+        100% 50%, 
+        85% 85%, 
+        50% 100%, 
+        15% 85%, 
+        0% 50%, 
+        15% 15%
+    );
+
+}
+
+/* Apply styles for when the profile image is not floating */
+@media (max-width: 600px) {
+    main img.profile-pic {
+        float: none; /* Remove float on smaller screens */
+        display: block;
+        margin: 0 auto 20px auto; /* Center the image */
+    }
+}
+
+/* Apply styles for when the profile image is not floating */
+@media (max-width: 600px) {
+    main img.profile-pic {
+        float: none; /* Remove float on smaller screens */
+        display: block;
+        margin: 0 auto 20px auto; /* Center the image */
+    }
+}
+
+/* Apply styles for when the profile image is not floating */
+@media (max-width: 600px) {
+    main img.profile-pic {
+        float: none; /* Remove float on smaller screens */
+        display: block;
+        margin: 0 auto 20px auto; /* Center the image */
+    }
+}
+
+/* Reset paragraph padding for cleaner layout */
+main p {
+    padding: 0;
+}
+
+/* Added clearfix for floated elements */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Aside Styles */
+aside {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 7px solid #fff3fc;
+    padding: 15px;
+    background-color:  rgba(253, 241, 241, 0.8);
+    color: #5f5454;
+    text-align: center;
+}
+
+aside img.aside-img {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    /* Added a subtle shadow for the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    clear: both; /* Ensure footer is below floated elements */
+    margin-top: 20px;
+    border-top: 7px solid #fff3fc;
+    text-align: center;
+    padding: 10px;
+    background-color: #ebc2ce;
+    color: #fff6fd;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    /* Adjust profile image for smaller screens */
+    main img.profile-pic {
+        float: none; /* Remove float on smaller screens */
+        display: block;
+        margin: 0 auto 20px auto; /* Center the image */
+    }
+
+    /* Reduce aside image size on smaller screens */
+    aside img.aside-img {
+        width: 150px;
+    }
+}
+
