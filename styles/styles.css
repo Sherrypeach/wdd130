@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: #ebc2ce;
+    color: #5f5454;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 7px solid #fff3fc;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav a {
+    color: #fff6fd;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #333;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+header img.bow {
+    height: 40px;
+    width: auto;
+    margin: 0 20px;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    color: #5f5454;
+    background-color: rgba(253, 241, 241, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.playwrite-in-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Playwrite IN', serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #5f5454;
+}
+
+/* Profile Image */
+main img.profile-pic {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    object-fit: cover;
+    -webkit-clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
+   
+}
+
+main p {
+    padding: 0;
+}
+
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Aside Styles */
+aside {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 7px solid #fff3fc;
+    padding: 15px;
+    background-color: rgba(253, 241, 241, 0.8);
+    color: #5f5454;
+    text-align: center;
+}
+
+aside img.aside-img {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    clear: both;
+    margin-top: 20px;
+    border-top: 7px solid #fff3fc;
+    text-align: center;
+    padding: 10px;
+    background-color: #ebc2ce;
+    color: #fff6fd;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    main img.profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    aside img.aside-img {
+        width: 150px;
+    }
+}
