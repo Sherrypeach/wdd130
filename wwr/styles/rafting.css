@@ -1,128 +1,198 @@
-/* Root Variables for Colors and Fonts */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
 :root {
-  --white-color: #ffffff; /* Simple white */
-  --primary-color: #DDD8C4; /* Light beige */
-  --secondary-color: #A3C9A8; /* Soft green */
-  --accent1-color: #69A297; /* Dark teal green */
-  --accent2-color: #50808E; /* Deep blue-gray */
-  --heading-font: 'Poppins', sans-serif;
-  --text-font: 'Lora', serif;
+  --primary-bg: #ddd8c4;
+  --header-bg: #69a297;
+  --footer-bg: #50808e;
+  --text-color: #333;
+  --white: #fff;
+  --accent: #a3c9a8;
 }
 
 /* General Styles */
 body {
-  font-family: var(--text-font);
-  margin: 0;
-  padding: 0;
-  color: var(--accent2-color);
-  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--primary-bg);
 }
 
 header {
-  background-color: var(--accent1-color);
-  color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+  background-color: var(--header-bg);
+}
+
+/* Logo Container */
+.logo-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-header .logo {
-  height: 80px;
-}
-
-nav a {
-  color: var(--secondary-color);
-  margin: 0 3rem;
-  text-decoration: none;
-  font-family: var(--heading-font);
-  font-weight: 900;
-  font-size: 1.5rem;
-}
-
-nav a:hover {
-  color: var(--accent2-color);
-}
-
-.hero {
-  position: relative; /* Makes the hero a positioning context */
-  text-align: center;
-  color: var(--secondary-color);
-}
-
-.hero-img {
-  width: 100%;
+.logo {
+  width: 60px; /* Smaller logo size */
   height: auto;
-  display: block;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-left: 0.5rem; /* Space between the logo and the name */
+  font-family: 'Poppins', sans-serif;
+}
+
+header nav a {
+  margin: 0 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  margin-bottom: 2rem; /* Space below the Hero Section */
 }
 
 .hero h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--heading-font);
-  font-size: 3rem;
-  color: var(--white-color);
+  text-align: center; /* Center the title horizontally */
+  font-size: 2.5rem; /* Adjust title size */
+  color: var(--header-bg);
+  margin-bottom: 2rem; /* Space between the title and the content below */
 }
 
-article {
-  position: absolute;
-  bottom: 5%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  background-color: rgba(68, 104, 76, 0.6); 
-  padding: 2rem; 
-  border-radius: 12px; 
-  color: var(--white-color); 
-  max-width: 600px; 
-  text-align: center; 
-  font-size: 1.2rem; 
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; /* Space between text and image */
 }
 
-.article-img {
-  float: right;
-  margin-left: 1rem;
-  border-radius: 50%;
-  width: 150px; /* Image size */
-  height: 150px;
+.hero-text {
+  flex: 1; /* Text takes up the remaining space */
 }
 
-section {
+.hero p {
+  line-height: 1.6; /* Improve readability of the text */
+}
+
+.hero img {
+  width: 20%; /* Adjust image size */
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+
+
+/* History Section */
+.history {
   padding: 2rem;
+  background-color: var(--accent);
+  color: var(--white);
 }
 
-section h2 {
-  font-family: var(--heading-font);
-  font-size: 2rem;
-  color: var(--accent1-color);
+.history h2 {
+  text-align: center; /* Centers the title */
+  font-size: 2rem; /* Adjust as needed */
+  color: var(--white); /* Matches section text color */
+  margin-bottom: 1rem; /* Space below the title */
+  font-family: 'Poppins', sans-serif;
+}
+
+.history-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.history-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 3%;
+}
+.history-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1%;
+}
+
+.history img {
+  width: 30%;
+  height: auto;
+  margin-left: 3%;
+}
+
+/* Adventure Section */
+.adventure {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem; /* Separación del contenido anterior */
+  clear: both; /* Asegura que esta sección comience debajo de flotantes */
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensures the images wrap if the screen is small */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery div {
+  width: 18%; /* Each image container takes 18% of the width */
   text-align: center;
 }
 
-section p {
-  font-family: var(--text-font);
-  line-height: 1.6;
-  text-align: center;
+.gallery img {
+  width: 100%; /* Images scale to fit their container */
+  height: auto;
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
-section img {
-  max-width: 100%;
-  margin: 0.5rem;
-  display: inline-block;
+.gallery p {
+  font-size: 0.9rem; /* Smaller caption text */
+  margin-top: 0.5rem;
 }
 
+/* Footer */
 footer {
-  background-color: var(--accent2-color);
-  color: var(--primary-color);
-  text-align: center;
+  background-color: var(--footer-bg);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between; /* Space between text and icons */
+  align-items: center; /* Center text vertically */
   padding: 1rem;
 }
 
-footer a img {
-  height: 30px;
-  margin: 0 0.5rem;
+footer p {
+  margin: 0 auto; /* Center text horizontally in the footer */
+  margin-left: 45%;
+  text-align: center; /* Ensure the text is centered within itself */
 }
 
-footer a {
-  text-decoration: none;
+footer .social-icons {
+  display: flex; /* Arrange icons horizontally */
+  gap: 0.5rem; /* Space between icons */
+}
+
+footer .social-icons a img {
+  width: 30px; /* Icon size */
+  height: auto;
 }
