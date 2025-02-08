@@ -361,6 +361,14 @@ footer .social-icons a img:hover {
   border-radius: 8px;
 }
 
+#google-map {
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border-radius: 8px;
+}
+
 .team {
   background-color: var(--primary-bg);
 }
