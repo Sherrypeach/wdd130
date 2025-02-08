@@ -441,6 +441,21 @@ footer .social-icons a img:hover {
     max-width: 1280px;
     margin: auto;
 }
+
+.wireframe-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(--accent); 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.wireframe-button:hover {
+  background-color: var(--header-bg);
+}
 /* ============================= */
 /*              end              */
 /* ============================= */
